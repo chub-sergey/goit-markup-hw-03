@@ -1,11 +1,13 @@
-:root{--main-color:  #2e2f42;
-  --second-color:#434455;
-  --primary-brand-color:#4d5ae5;
-  --pressed-state-color:#404bbf;
-  --light-first-color:#ffffff;
+:root {
+  --main-color: #2e2f42;
+  --second-color: #434455;
+  --primary-brand-color: #4d5ae5;
+  --pressed-state-color: #404bbf;
+  --light-first-color: #ffffff;
   --light-second-color: #f4f4fd;
   --light-third-color: #e7e9fc;
-  --typical-lh: 1.5;}
+  --typical-lh: 1.5;
+}
 body {
   font-family: 'Roboto', sans-serif;
 }
@@ -15,22 +17,66 @@ body {
 .link {
   text-decoration: none;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+img {
+  display: block;
+  /* max-width: 100%;
+  height: auto; */
+}
+address {
+  font-style: normal;
+}
+button {
+  cursor: pointer;
+}
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
   width: 1px;
-  height: 1px;  overflow: hidden;
+  height: 1px;
+  overflow: hidden;
   border: 0;
   padding: 0;
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   margin: -1px;
 }
+
 /* ======Header====================== */
-/* .header {
+.header {
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
-.header-navigation 
-} */
+.container {
+  width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+}
+.header-navigation {
+  display: flex;
+  align-items: center;
+}
 .header-logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
@@ -39,33 +85,45 @@ body {
   color: var(--main-color);
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-right: 76px;
+}
+.header-logo-color {
+  color: var(--primary-brand-color);
+}
+.header-list {
+  display: flex;
+  align-items: center;
 }
 
-/* .header-list {
-}
 .header-item {
-} */
+  margin-right: 40px;
+}
+.header-item:last-child {
+  margin-right: 0px;
+}
 .header-link {
   font-weight: 600;
   font-size: 16px;
   line-height: var(--typical-lh);
   letter-spacing: 0.02em;
   color: var(--main-color);
+  padding: 8px;
 }
 .header-link:hover,
 .header-link:focus {
   color: var(--pressed-state-color);
 }
-.header-logo-color {
-  color: var(--primary-brand-color);
-}
-/* .address {
+
+.address {
+  margin-left: auto;
 }
 .address-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 .address-item {
-} */
-
+}
 .address-mail {
   font-style: normal;
   font-size: 16px;
@@ -91,22 +149,34 @@ body {
 /* =============  Hero================== */
 .hero {
   background-color: var(--main-color);
+  text-align: center;
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
 .hero-title {
+  max-width: 500px;
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
   color: var(--light-first-color);
+  margin-right: auto;
+  margin-bottom: 48px;
+  margin-left: auto;
 }
+
 .hero-btn {
+  display: inline-block;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: var(--typical-lh);
   background-color: var(--primary-brand-color);
-  color:var(--light-first-color);
+  color: var(--light-first-color);
   letter-spacing: 0.04em;
-  cursor: pointer;
+  border-radius: 4px;
+  padding: 16px 32px;
+  min-width: 169px;
+  height: 56px;
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -114,88 +184,136 @@ body {
 }
 
 /* ============= Features================= */
-/* .features {
+.features {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
+
 .features-list {
+  display: flex;
+  align-items: center;
+}
+.feature-item:not(:last-child) {
+  margin-right: 24px;
 }
 .feature-item {
-} */
+  flex-basis: calc((100%-72px) / 4);
+}
 .feature-title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--main-color);
+  margin-bottom: 8px;
 }
 .feature-text {
   font-size: 16px;
   line-height: var(--typical-lh);
   letter-spacing: 0.02em;
+  /* max-width: 264px; */
   color: var(--second-color);
 }
+.feature-text:not(:last-child) {
+  margin-left: 24px;
+}
 /* ===============About===================== */
-/* .about {
-} */
+.about {
+  text-align: center;
+
+  padding-bottom: 120px;
+}
+
 .about-title {
   font-weight: 600;
   font-size: 36px;
-  line-height: 1.11; 
+  line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--main-color);
+  margin-bottom: 72px;
 }
-/* .about-list {
+.about-list {
+  display: flex;
+  align-items: center;
+  margin-right: 24px;
+}
+
+.about-item:not(:last-child) {
+  margin-right: 24px;
 }
 .about-item {
-} */
+  flex-basis: calc((100%-48px) / 3);
+}
 /* ================Team===================== */
 .team {
+  padding-top: 120px;
+  padding-bottom: 120px;
   background-color: var(--light-second-color);
+  text-align: center;
 }
 .team-title {
   font-weight: 600;
   font-size: 36px;
-  line-height: 1.11;  
+  line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--main-color);
 }
-/* .team-list {
+
+.team-list {
+  display: flex;
+  align-items: center;
 }
-.team-item { */
+.team-item:not(:last-child) {
+  margin-right: 24px;
 }
+.team-item {
+  flex-basis: calc((100%-72px) / 4);
+}
+
 .team-surname {
   font-weight: 500;
   font-size: 20px;
-  line-height: 1.2;  
+  line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--main-color);
   background-color: var(--light-text-color);
+  margin-bottom: 8px;
 }
+
 .team-text {
   font-size: 16px;
-  line-height:var(--typical-lh);  
+  line-height: var(--typical-lh);
   letter-spacing: 0.02em;
   color: var(--second-color);
+}
+.team-content {
+  padding: 32px 16px;
+  background-color: var(--light-first-color);
 }
 /* ==============Footer================ */
 .footer {
   background-color: var(--main-color);
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .footer-logo {
-  font-family: 'Raleway',sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 1.16;
   color: var(--light-second-color);
   text-transform: uppercase;
+  margin-bottom: 16px;
 }
 .footer-logo-color {
   color: var(--primary-brand-color);
 }
 .footer-text {
+  width: 264px;
   font-size: 16px;
   line-height: var(--typical-lh);
   letter-spacing: 0.02em;
-  color:  var(--light-third-color);
+  color: var(--light-third-color);
 }
